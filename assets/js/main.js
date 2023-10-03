@@ -257,5 +257,82 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+  const danhSachUngHo = [
+    { id: 1, ten: "Lê Võ Lan Nhi", soTien: 200000 },
+    { id: 2, ten: "Đỗ Thị Thùy Linh", soTien: 200000 },
+    { id: 3, ten: "Võ Thành Công", soTien: 100000 },
+    { id: 4, ten: "Lê Võ Quang", soTien: 25000 },
+    { id: 5, ten: "Lê Trần Đại Phát", soTien: 100000 },
+    { id: 6, ten: "Nguyễn Trí Định", soTien: 40000 },
+    { id: 7, ten: "Bác Sĩ Trần Như Duy", soTien: 500000 },
+];
+const formatter = new Intl.NumberFormat('vi-VN', {
+  style: 'currency',
+  currency: 'VND',
+
+});
+
+const itemsPerPage = 4; // Số hàng trên mỗi trang
+const table = document.getElementById('myTable');
+const rows = table.getElementsByTagName('tr');
+const totalItems = danhSachUngHo.length; // Sử dụng độ dài của danhSachUngHo thay vì độ dài của hàng
+const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+// Hàm để hiển thị các mục trên trang được chỉ định
+function displayPage(page) {
+    for (let i = 1; i < rows.length; i++) {
+        if (i >= (page - 1) * itemsPerPage + 1 && i <= page * itemsPerPage) {
+            rows[i].style.display = 'table-row';
+        } else {
+            rows[i].style.display = 'none';
+        }
+    }
+}
+
+// Tạo nút phân trang bằng JavaScript
+const pagination = document.getElementById('pagination');
+for (let i = 1; i <= totalPages; i++) {
+    const li = document.createElement('li');
+    li.textContent = i;
+    if (i === 1) {
+        li.classList.add('active');
+    }
+    li.addEventListener('click', function () {
+        const currentPage = parseInt(this.textContent);
+        displayPage(currentPage);
+        // Loại bỏ lớp active từ tất cả các nút và thêm nó vào nút được chọn
+        const paginationItems = document.querySelectorAll('.pagination li');
+        paginationItems.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+    });
+    pagination.appendChild(li);
+}
+
+// Hiển thị trang đầu tiên ban đầu
+
+
+// Render dữ liệu vào bảng
+danhSachUngHo.forEach((doiTuong, index) => {
+    const row = table.insertRow(); // Tạo một hàng mới trong bảng
+
+    // Chèn dữ liệu vào các ô trong hàng
+    const sttCell = row.insertCell(0);
+    sttCell.textContent = doiTuong.id;
+
+    const hoTenCell = row.insertCell(1);
+    hoTenCell.textContent = doiTuong.ten;
+
+    const soTienUngHoCell = row.insertCell(2);
+      soTienUngHoCell.textContent = formatter.format(doiTuong.soTien);  
+    displayPage(1);
+});
+function tinhTongSoTien(danhSach) {
+  return danhSach.reduce((total, doiTuong) => total + doiTuong.soTien, 0);
+}
+const tongSoTien = tinhTongSoTien(danhSachUngHo);
+const tongSoTienElement = document.getElementById('sum');
+if (tongSoTienElement) {
+  tongSoTienElement.textContent = formatter.format(tongSoTien);
+}
 
 })()

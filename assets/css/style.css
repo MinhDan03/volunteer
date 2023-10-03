@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #444444;
 }
 .member .nhan {
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -158,7 +158,7 @@ h6 {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 30px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: #4f5a62;
@@ -394,7 +394,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 2px;
@@ -429,6 +429,88 @@ h6 {
         margin-bottom: 30px;
     }
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    border-radius: 20px;
+}
+
+th, td {
+    /* border: 1px solid #dddddd; */
+    text-align: center;
+    padding: 10px;
+}
+
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 10%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 50%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 40%;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tuỳ chỉnh màu sắc và kiểu chữ theo ý muốn */
+th, td {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+th {
+    background-color: #f2f2f2;
+    /* opacity: 0.8; */
+    color: black;
+    font-weight: bold;
+
+}
+
+
+/* Phân trang container */
+#pagination {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Nút phân trang */
+#pagination li {
+    margin: 5px 10px 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Nút phân trang được chọn */
+#pagination .active {
+    background-color: #f2f2f2;
+    color: black;
+    font-weight: 500;
+    border: 1px solid #f2f2f2;
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -554,7 +636,7 @@ section {
 }
 
 .about ul li + li {
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .about ul li {
@@ -606,7 +688,7 @@ section {
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #384046;
 }
 
@@ -669,7 +751,7 @@ section {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 
@@ -720,7 +802,7 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
 }
 
 .portfolio #portfolio-flters {
@@ -783,6 +865,14 @@ section {
     opacity: 0.4;
     transition: 0.4s;
 }
+.img-fluid{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+.img-logo{
+    margin: 0 50px 20px 50px;
+}
 
 .portfolio .portfolio-item figure .link-preview,
 .portfolio .portfolio-item figure .link-details {
@@ -837,39 +927,24 @@ section {
     opacity: 1;
     right: calc(50% - 44px);
 }
-
+/* 
 .portfolio .portfolio-item .portfolio-info {
     background: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 15px 10px 20px 10px;
     height: 90px;
     border-radius: 0 0 3px 3px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-    font-size: 18px;
-    line-height: 1px;
-    font-weight: 700;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
     margin-bottom: 18px;
     padding-bottom: 0;
-}
+    color: #000;
+  } */
 
-.portfolio .portfolio-item .portfolio-info h4 a {
-    color: #333;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 a:hover {
-    color: #3498db;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-    padding: 0;
-    margin: 0;
-    color: #b8b8b8;
-    font-weight: 500;
-    font-size: 14px;
-    text-transform: uppercase;
-}
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -1293,7 +1368,7 @@ section {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #777777;
 }
 
