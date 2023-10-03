@@ -13,11 +13,13 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #444444;
 }
+
 .member .nhan {
     width: 225px;
     height: 225px;
     object-fit: cover;
 }
+
 a {
     color: #3498db;
     text-decoration: none;
@@ -176,7 +178,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
     color: #ff518f;
 }
 
@@ -212,11 +214,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
     color: #ff518f;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -228,7 +230,7 @@ h6 {
     visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -240,7 +242,7 @@ h6 {
         left: -90%;
     }
 
-    .navbar .dropdown .dropdown:hover > ul {
+    .navbar .dropdown .dropdown:hover>ul {
         left: -100%;
     }
 }
@@ -311,7 +313,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
     color: #ff518f;
 }
 
@@ -344,7 +346,7 @@ h6 {
     font-size: 12px;
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
     display: block;
 }
 
@@ -429,16 +431,18 @@ h6 {
         margin-bottom: 30px;
     }
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
     height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 20px;
 }
 
-th, td {
+th,
+td {
     /* border: 1px solid #dddddd; */
     text-align: center;
     padding: 10px;
@@ -471,7 +475,8 @@ caption {
 }
 
 /* Tuỳ chỉnh màu sắc và kiểu chữ theo ý muốn */
-th, td {
+th,
+td {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
@@ -566,10 +571,11 @@ section {
 # What We Do
 --------------------------------------------------------------*/
 @media (max-width: 767px) {
-    .what-we-do .icon-box{
+    .what-we-do .icon-box {
         width: 100%;
     }
 }
+
 .what-we-do .icon-box {
     text-align: center;
     padding: 30px 20px;
@@ -627,6 +633,7 @@ section {
 --------------------------------------------------------------*/
 .about {
     padding: 10px 0;
+    margin-top: 60px;
 }
 
 .about h3 {
@@ -640,7 +647,7 @@ section {
     font-size: 15px;
 }
 
-.about ul li + li {
+.about ul li+li {
     /* margin-top: 10px; */
 }
 
@@ -763,6 +770,11 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.title_banner {
+    font-size: 24px;
+    color: white;
+}
+
 .services .icon-box {
     padding: 30px;
     border-radius: 6px;
@@ -870,12 +882,14 @@ section {
     opacity: 0.4;
     transition: 0.4s;
 }
-.img-fluid{
+
+.img-fluid {
     width: 100%;
     height: 300px;
     object-fit: cover;
-  }
-.img-logo{
+}
+
+.img-logo {
     margin: 0 50px 20px 50px;
 }
 
@@ -932,6 +946,7 @@ section {
     opacity: 1;
     right: calc(50% - 44px);
 }
+
 /* 
 .portfolio .portfolio-item .portfolio-info {
     background: #fff;
@@ -967,10 +982,7 @@ section {
     position: relative;
 }
 
-.portfolio-details
-    .portfolio-details-slider
-    .swiper-pagination
-    .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background-color: #fff;
@@ -978,10 +990,7 @@ section {
     border: 1px solid #3498db;
 }
 
-.portfolio-details
-    .portfolio-details-slider
-    .swiper-pagination
-    .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #3498db;
 }
 
@@ -1004,7 +1013,7 @@ section {
     font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
     margin-top: 10px;
 }
 
@@ -1226,7 +1235,7 @@ section {
     font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
     margin-top: 25px;
 }
 
@@ -1318,40 +1327,47 @@ section {
     font-size: 15px;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
     padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
     display: inline-block;
     padding-right: 10px;
     color: #4f5a62;
     content: "/";
 }
-.qrungho img{
-    width: 300px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius: 20px;
+
+.qrungho img {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
 }
-.box-sum{
+
+.box-sum {
     background-color: #D72C8C;
-    border-radius: 20px; 
-    width: 600px; 
-    margin-left: 310px; 
-    margin-top: 100px; 
+    border-radius: 20px;
+    width: 600px;
+    margin-left: 310px;
+    margin-top: 100px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 @media (max-width: 767px) {
-    .qrungho{
+    .qrungho {
         /* margin: 100px 15% 10px 15%;        */
         /* margin: auto ; */
         padding: 18%;
     }
-    .box-sum{
+
+    .box-sum {
         width: 100%;
         /* margin-left: 310px; 
         margin-top: 100px;  */
         margin: 0 0 0 0;
     }
-    .qrungho img{
+
+    .qrungho img {
         width: 100%;
     }
 }

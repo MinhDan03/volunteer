@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -110,7 +110,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -119,7 +119,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -129,7 +129,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -163,7 +163,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -185,9 +185,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -265,54 +265,54 @@
     { id: 5, ten: "Lê Trần Đại Phát", soTien: 100000 },
     { id: 6, ten: "Nguyễn Trí Định", soTien: 40000 },
     { id: 7, ten: "Bác Sĩ Trần Như Duy", soTien: 500000 },
-];
-const formatter = new Intl.NumberFormat('vi-VN', {
-  style: 'currency',
-  currency: 'VND',
+  ];
+  const formatter = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
 
-});
+  });
 
-const itemsPerPage = 4; // Số hàng trên mỗi trang
-const table = document.getElementById('myTable');
-const rows = table.getElementsByTagName('tr');
-const totalItems = danhSachUngHo.length; // Sử dụng độ dài của danhSachUngHo thay vì độ dài của hàng
-const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const itemsPerPage = 4; // Số hàng trên mỗi trang
+  const table = document.getElementById('myTable');
+  const rows = table.getElementsByTagName('tr');
+  const totalItems = danhSachUngHo.length; // Sử dụng độ dài của danhSachUngHo thay vì độ dài của hàng
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-// Hàm để hiển thị các mục trên trang được chỉ định
-function displayPage(page) {
+  // Hàm để hiển thị các mục trên trang được chỉ định
+  function displayPage(page) {
     for (let i = 1; i < rows.length; i++) {
-        if (i >= (page - 1) * itemsPerPage + 1 && i <= page * itemsPerPage) {
-            rows[i].style.display = 'table-row';
-        } else {
-            rows[i].style.display = 'none';
-        }
+      if (i >= (page - 1) * itemsPerPage + 1 && i <= page * itemsPerPage) {
+        rows[i].style.display = 'table-row';
+      } else {
+        rows[i].style.display = 'none';
+      }
     }
-}
+  }
 
-// Tạo nút phân trang bằng JavaScript
-const pagination = document.getElementById('pagination');
-for (let i = 1; i <= totalPages; i++) {
+  // Tạo nút phân trang bằng JavaScript
+  const pagination = document.getElementById('pagination');
+  for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement('li');
     li.textContent = i;
     if (i === 1) {
-        li.classList.add('active');
+      li.classList.add('active');
     }
     li.addEventListener('click', function () {
-        const currentPage = parseInt(this.textContent);
-        displayPage(currentPage);
-        // Loại bỏ lớp active từ tất cả các nút và thêm nó vào nút được chọn
-        const paginationItems = document.querySelectorAll('.pagination li');
-        paginationItems.forEach(item => item.classList.remove('active'));
-        this.classList.add('active');
+      const currentPage = parseInt(this.textContent);
+      displayPage(currentPage);
+      // Loại bỏ lớp active từ tất cả các nút và thêm nó vào nút được chọn
+      const paginationItems = document.querySelectorAll('.pagination li');
+      paginationItems.forEach(item => item.classList.remove('active'));
+      this.classList.add('active');
     });
     pagination.appendChild(li);
-}
+  }
 
-// Hiển thị trang đầu tiên ban đầu
+  // Hiển thị trang đầu tiên ban đầu
 
 
-// Render dữ liệu vào bảng
-danhSachUngHo.forEach((doiTuong, index) => {
+  // Render dữ liệu vào bảng
+  danhSachUngHo.forEach((doiTuong, index) => {
     const row = table.insertRow(); // Tạo một hàng mới trong bảng
 
     // Chèn dữ liệu vào các ô trong hàng
@@ -323,16 +323,16 @@ danhSachUngHo.forEach((doiTuong, index) => {
     hoTenCell.textContent = doiTuong.ten;
 
     const soTienUngHoCell = row.insertCell(2);
-      soTienUngHoCell.textContent = formatter.format(doiTuong.soTien);  
+    soTienUngHoCell.textContent = formatter.format(doiTuong.soTien);
     displayPage(1);
-});
-function tinhTongSoTien(danhSach) {
-  return danhSach.reduce((total, doiTuong) => total + doiTuong.soTien, 0);
-}
-const tongSoTien = tinhTongSoTien(danhSachUngHo);
-const tongSoTienElement = document.getElementById('sum');
-if (tongSoTienElement) {
-  tongSoTienElement.textContent = formatter.format(tongSoTien);
-}
+  });
+  function tinhTongSoTien(danhSach) {
+    return danhSach.reduce((total, doiTuong) => total + doiTuong.soTien, 0);
+  }
+  const tongSoTien = tinhTongSoTien(danhSachUngHo);
+  const tongSoTienElement = document.getElementById('sum');
+  if (tongSoTienElement) {
+    tongSoTienElement.textContent = formatter.format(tongSoTien);
+  }
 
 })()
