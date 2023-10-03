@@ -565,6 +565,11 @@ section {
 /*--------------------------------------------------------------
 # What We Do
 --------------------------------------------------------------*/
+@media (max-width: 767px) {
+    .what-we-do .icon-box{
+        width: 100%;
+    }
+}
 .what-we-do .icon-box {
     text-align: center;
     padding: 30px 20px;
@@ -1322,6 +1327,33 @@ section {
     padding-right: 10px;
     color: #4f5a62;
     content: "/";
+}
+.qrungho img{
+    width: 300px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius: 20px;
+}
+.box-sum{
+    background-color: #D72C8C;
+    border-radius: 20px; 
+    width: 600px; 
+    margin-left: 310px; 
+    margin-top: 100px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media (max-width: 767px) {
+    .qrungho{
+        /* margin: 100px 15% 10px 15%;        */
+        /* margin: auto ; */
+        padding: 18%;
+    }
+    .box-sum{
+        width: 100%;
+        /* margin-left: 310px; 
+        margin-top: 100px;  */
+        margin: 0 0 0 0;
+    }
+    .qrungho img{
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
