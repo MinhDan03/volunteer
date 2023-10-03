@@ -265,6 +265,9 @@
     { id: 5, ten: "Lê Trần Đại Phát", soTien: 100000 },
     { id: 6, ten: "Nguyễn Trí Định", soTien: 40000 },
     { id: 7, ten: "Bác Sĩ Trần Như Duy", soTien: 500000 },
+    { id: 8, ten: "Hoàng Thành", soTien: 200000 },
+    { id: 9, ten: "Hoàng Khải Thư", soTien: 200000 },
+    { id: 10, ten: "Hồ Thanh Hương", soTien: 200000 },
   ];
   const formatter = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
@@ -272,7 +275,7 @@
 
   });
 
-  const itemsPerPage = 4; // Số hàng trên mỗi trang
+  const itemsPerPage = 5; // Số hàng trên mỗi trang
   const table = document.getElementById('myTable');
   const rows = table.getElementsByTagName('tr');
   const totalItems = danhSachUngHo.length; // Sử dụng độ dài của danhSachUngHo thay vì độ dài của hàng
