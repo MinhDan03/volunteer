@@ -1336,8 +1336,8 @@ section {
 .box-sum {
     background-color: #D72C8C;
     border-radius: 20px;
-    width: 600px;
-    margin-left: 258px;
+    width: 50%;
+    margin: 0 25% 0 25%;
     margin-top: 100px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
