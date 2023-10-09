@@ -283,6 +283,9 @@
     { id: 23, ten: "Nguyễn Phan Chinh Châu", soTien: 5000 },
     { id: 24, ten: "Lớp Toàn Cá Chép (Thầy Huy)", soTien: 600000 },
     { id: 25, ten: "Đinh Phước Tài", soTien: 200000 },
+    { id: 25, ten: "Lê Trung Quân", soTien: 434542 },
+    { id: 25, ten: "Duy Trần, Ngân Hoàng", soTien: 1000000 },
+    { id: 25, ten: "Dược Sĩ Trần Thị Yến Nhi", soTien: 1000000 },
   ];
   const formatter = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
@@ -327,15 +330,18 @@
   }
 
   // Hiển thị trang đầu tiên ban đầu
-
-
+  function compareSoTien(a, b) {
+    return b.soTien - a.soTien;
+  }
+  danhSachUngHo.sort(compareSoTien);
   // Render dữ liệu vào bảng
   danhSachUngHo.forEach((doiTuong, index) => {
     const row = table.insertRow(); // Tạo một hàng mới trong bảng
 
     // Chèn dữ liệu vào các ô trong hàng
     const sttCell = row.insertCell(0);
-    sttCell.textContent = doiTuong.id;
+    sttCell.textContent = index + 1;
+    // sttCell.textContent = doiTuong.id;
 
     const hoTenCell = row.insertCell(1);
     hoTenCell.textContent = doiTuong.ten;
