@@ -276,6 +276,13 @@
     { id: 16, ten: "Huỳnh Minh Thanh", soTien: 50000 },
     { id: 17, ten: "Huỳnh Minh Nhật", soTien: 20000 },
     { id: 18, ten: "Cáp Đoàn Phúc", soTien: 60000 },
+    { id: 19, ten: "Tô Nhã Phương", soTien: 10000 },
+    { id: 20, ten: "Nguyễn Đức Thắng", soTien: 10000 },
+    { id: 21, ten: "Lữ Ngọc Quyến", soTien: 50000 },
+    { id: 22, ten: "Dương Thanh Phương", soTien: 100000 },
+    { id: 23, ten: "Nguyễn Phan Chinh Châu", soTien: 5000 },
+    { id: 24, ten: "Lớp Toàn Cá Chép (Thầy Huy)", soTien: 600000 },
+    { id: 25, ten: "Đinh Phước Tài", soTien: 200000 },
   ];
   const formatter = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
