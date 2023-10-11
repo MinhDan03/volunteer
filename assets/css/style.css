@@ -483,6 +483,10 @@ th {
     padding: 0;
 }
 
+.phantrang {
+    display: flex;
+}
+
 /* Nút phân trang */
 #pagination li {
     margin: 5px 10px 0 0;
