@@ -286,7 +286,6 @@
     { id: 26, ten: "Lê Trung Quân", soTien: 434542 },
     { id: 27, ten: "Duy Trần, Ngân Hoàng", soTien: 1000000 },
     { id: 28, ten: "Dược Sĩ Trần Thị Yến Nhi", soTien: 1000000 },
-    { id: 29, ten: "Ẩn Danh", soTien: 60000 },
   ];
   const formatter = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
