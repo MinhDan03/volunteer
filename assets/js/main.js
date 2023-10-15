@@ -359,5 +359,36 @@
   if (tongSoTienElement) {
     tongSoTienElement.textContent = formatter.format(tongSoTien);
   }
+  const sliderContent = document.getElementById('slider-content');
+  const slides = document.querySelectorAll('.slide');
+  const prevButton = document.getElementById('prev-button');
+  const nextButton = document.getElementById('next-button');
+  let currentIndex = 0;
 
+  function showSlide(index) {
+    currentIndex = index;
+    const translateX = -currentIndex * 100;
+    sliderContent.style.transform = `translateX(${translateX}%)`;
+  }
+
+  function prevSlide() {
+    if (currentIndex > 0) {
+      showSlide(currentIndex - 1);
+    }
+  }
+
+  function nextSlide() {
+    if (currentIndex < slides.length - 1) {
+      showSlide(currentIndex + 1);
+    } else {
+      // Khi ở slide cuối, chuyển đến slide đầu mà không tạo hiệu ứng trả ngược
+      showSlide(0);
+    }
+  }
+
+  prevButton.addEventListener('click', prevSlide);
+  nextButton.addEventListener('click', nextSlide);
+
+  // Initialize the slider
+  showSlide(0);
 })()
