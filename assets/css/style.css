@@ -815,6 +815,26 @@ section {
 --------------------------------------------------------------*/
 .portfolio {
     padding: 60px 0 0 0;
+    position: relative;
+}
+
+.btn_action {
+    border: none;
+    background: none;
+    font-size: 36px;
+}
+
+
+#prev-button {
+    position: absolute;
+    top: 54%;
+    left: 4%;
+}
+
+#next-button {
+    position: absolute;
+    top: 54%;
+    right: 4%;
 }
 
 .portfolio #portfolio-flters {
@@ -1521,6 +1541,23 @@ section {
     font-size: 13px;
     color: #444444;
 }
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s;
+
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+
 
 #footer .social-links a {
     font-size: 18px;
